@@ -32,13 +32,18 @@ function handleMouseClick(event) {
     const mouseX = event.offsetX;
     const mouseY = event.offsetY;
 
+    console.log('Mouse Clicked at:', mouseX, mouseY); // Debugging line to see the mouse click coordinates
+
     // Button click logic
     if (isButtonClicked(mouseX, mouseY, rm_601_button)) {
         currentScreen = rm_601_image;
+        console.log("Switched to RM 601");
     } else if (isButtonClicked(mouseX, mouseY, staff_lounge_button)) {
         currentScreen = staff_lounge_image;
+        console.log("Switched to Staff Lounge");
     } else if (isButtonClicked(mouseX, mouseY, back_button)) {
         currentScreen = map;
+        console.log("Back button clicked - Switched to Map");
     }
 }
 
