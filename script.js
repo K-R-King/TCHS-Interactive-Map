@@ -15,7 +15,7 @@ const rm_601_button = { x: 775, y: 400, width: 50, height: 25 };
 const staff_lounge_button = { x: 743, y: 268, width: 115, height: 51 };
 const back_button = { x: 30, y: 20, width: 100, height: 50 };
 
-// Font definitions (JavaScript doesn't directly support Pygame fonts, use canvas text)
+// Font definitions
 const font = '33px Arial';
 const font1 = '25px Arial';
 const font2 = '30px Arial';
