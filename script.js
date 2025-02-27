@@ -67,12 +67,14 @@ function drawButton(button, text, font, color) {
 function gameLoop() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw the current screen
+    // Draw the current screen (image)
     ctx.drawImage(currentScreen, 0, 0);
 
     // Draw buttons
     drawButton(rm_601_button, '601', font, '#ffffff');
     drawButton(staff_lounge_button, 'Staff Lounge', font1, '#ffffff');
+    
+    // Draw the back button
     drawButton(back_button, 'Back', font2, '#ffffff');
 
     requestAnimationFrame(gameLoop);
