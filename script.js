@@ -1,98 +1,95 @@
-const { createCanvas, loadImage } = require('canvas');
-const fs = require('fs');
+// Create Canvas and Context
+const canvas = document.createElement("canvas");
+canvas.width = 1240;
+canvas.height = 930;
+document.body.appendChild(canvas);
+const ctx = canvas.getContext("2d");
 
-// Create canvas (similar to pygame display)
-const canvas = createCanvas(1240, 930);
-const ctx = canvas.getContext('2d');
+// Load map image
+const mapImage = new Image();
+mapImage.src = "graphics/map_copy.png";
 
-// Load images
-let map, rm_601_image, staff_lounge_image;
-loadImage('graphics/map_copy.png').then((image) => {
-    map = image;
-    checkAllImagesLoaded();
-});
-loadImage('graphics/601.png').then((image) => {
-    rm_601_image = image;
-    checkAllImagesLoaded();
-});
-loadImage('graphics/staff_lounge.png').then((image) => {
-    staff_lounge_image = image;
-    checkAllImagesLoaded();
-});
+// Load room images
+const images = {
+    "rm_601": "graphics/601.png",
+    "staff_lounge": "graphics/staff_lounge.png"
+};
 
-let current_screen = null;
-let rm_601_button_rect = { x: 775, y: 400, width: 50, height: 25 };
-let staff_lounge_button_rect = { x: 743, y: 268, width: 115, height: 51 };
-let back_button_rect = { x: 30, y: 20, width: 100, height: 50 };
+const loadedImages = {};
+let currentScreen = mapImage;
 
-// Check if all images are loaded
-let imagesLoaded = 0;
-function checkAllImagesLoaded() {
-    imagesLoaded++;
-    if (imagesLoaded === 3) {
-        current_screen = map;
-        startMainLoop();
-    }
+for (let key in images) {
+    loadedImages[key] = new Image();
+    loadedImages[key].src = images[key];
 }
 
-// Button hover effect
-function buttonHoverEffect(buttonRect, mouseX, mouseY) {
-    if (mouseX > buttonRect.x && mouseX < buttonRect.x + buttonRect.width &&
-        mouseY > buttonRect.y && mouseY < buttonRect.y + buttonRect.height) {
-        ctx.fillStyle = '#7FFF7A'; // Hover color
-    } else {
-        ctx.fillStyle = 'white'; // Default color
-    }
-    ctx.fillRect(buttonRect.x, buttonRect.y, buttonRect.width, buttonRect.height);
+// Interactive button areas
+const buttons = [
+    { x: 775, y: 400, width: 50, height: 25, room: "rm_601", label: "601" },
+    { x: 743, y: 268, width: 115, height: 51, room: "staff_lounge", label: "Staff Lounge" },
+    { x: 30, y: 20, width: 100, height: 50, room: "back", label: "Back" }
+];
+
+// Draw initial map
+document.addEventListener("DOMContentLoaded", () => {
+    mapImage.onload = () => {
+        ctx.drawImage(mapImage, 0, 0, canvas.width, canvas.height);
+        drawButtons();
+    };
+});
+
+// Draw buttons with hover effect
+function drawButtons() {
+    buttons.forEach(button => {
+        ctx.fillStyle = isHovering(button) ? "#7FFFD4" : "#FFFFFF";
+        ctx.fillRect(button.x, button.y, button.width, button.height);
+        ctx.strokeStyle = "black";
+        ctx.strokeRect(button.x, button.y, button.width, button.height);
+        
+        ctx.fillStyle = "black";
+        ctx.font = "20px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(button.label, button.x + button.width / 2, button.y + button.height / 2);
+    });
 }
 
-// Draw the buttons and screen
-function draw() {
-    // Clear the canvas
+// Handle click events
+canvas.addEventListener("click", (event) => {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    buttons.forEach(button => {
+        if (x >= button.x && x <= button.x + button.width && y >= button.y && y <= button.y + button.height) {
+            if (button.room === "back") {
+                currentScreen = mapImage;
+            } else {
+                currentScreen = loadedImages[button.room];
+            }
+            redraw();
+        }
+    });
+});
+
+// Check if mouse is hovering over a button
+function isHovering(button) {
+    const rect = canvas.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    return x >= button.x && x <= button.x + button.width && y >= button.y && y <= button.y + button.height;
+}
+
+// Handle mouse movement for hover effect
+canvas.addEventListener("mousemove", () => redraw());
+
+// Redraw screen with current map and buttons
+function redraw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Draw current screen (either map or a different image)
-    if (current_screen) {
-        ctx.drawImage(current_screen, 0, 0, canvas.width, canvas.height);
+    ctx.drawImage(currentScreen, 0, 0, canvas.width, canvas.height);
+    if (currentScreen === mapImage) {
+        drawButtons();
+    } else {
+        drawButtons(); // Draw back button only
     }
-
-    // Draw buttons with hover effect
-    buttonHoverEffect(rm_601_button_rect, 0, 0); // Replace with actual mouse position for real use
-    buttonHoverEffect(staff_lounge_button_rect, 0, 0); // Replace with actual mouse position
-    buttonHoverEffect(back_button_rect, 0, 0); // Replace with actual mouse position
-
-    // Draw button text
-    ctx.font = '33px Arial';
-    ctx.fillStyle = 'black';
-    ctx.fillText('601', rm_601_button_rect.x + 10, rm_601_button_rect.y + 17);
-    ctx.font = '25px Arial';
-    ctx.fillText('Staff Lounge', staff_lounge_button_rect.x + 10, staff_lounge_button_rect.y + 30);
-    ctx.fillText('Back', back_button_rect.x + 10, back_button_rect.y + 30);
 }
-
-// Event listener for mouse click (simulated here with mock data)
-function handleMouseClick(x, y) {
-    // Check for button clicks
-    if (x > rm_601_button_rect.x && x < rm_601_button_rect.x + rm_601_button_rect.width &&
-        y > rm_601_button_rect.y && y < rm_601_button_rect.y + rm_601_button_rect.height) {
-        current_screen = rm_601_image;
-    } else if (x > staff_lounge_button_rect.x && x < staff_lounge_button_rect.x + staff_lounge_button_rect.width &&
-               y > staff_lounge_button_rect.y && y < staff_lounge_button_rect.y + staff_lounge_button_rect.height) {
-        current_screen = staff_lounge_image;
-    } else if (x > back_button_rect.x && x < back_button_rect.x + back_button_rect.width &&
-               y > back_button_rect.y && y < back_button_rect.y + back_button_rect.height) {
-        current_screen = map;
-    }
-    draw(); // Redraw the canvas after a click
-}
-
-// Main loop (mocked here as a simple timer for continuous redrawing)
-function startMainLoop() {
-    setInterval(() => {
-        draw();
-    }, 1000 / 60); // ~60 FPS
-}
-
-// Simulate a mouse click (example: clicking on '601' button at (780, 410))
-handleMouseClick(780, 410); // Change these coordinates based on real user interaction
-
