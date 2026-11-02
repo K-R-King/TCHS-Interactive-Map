@@ -1,0 +1,7 @@
+# Original full-size photos and videos; the app uses the resized copies in assets/
+Graphics/
+
+__pycache__/
+*.pyc
+.vscode/
+.idea/
