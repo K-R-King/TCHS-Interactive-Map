@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TCHS Campus Map – QR poster</title>
+  <style>
+    @page { size: letter; margin: 0.6in; }
+    body { margin: 0; font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; color: #0f172a; text-align: center; }
+    .poster { max-width: 7in; margin: 0 auto; padding: 0.4in 0; }
+    h1 { margin: 0; font-size: 46px; line-height: 1.1; }
+    h2 { margin: 12px 0 0; font-size: 26px; font-weight: 500; color: #475569; }
+    img { display: block; width: 4.6in; height: 4.6in; margin: 0.45in auto 0.3in; image-rendering: pixelated; }
+    .steps { display: flex; justify-content: center; gap: 28px; margin: 0 0 0.3in; font-size: 19px; color: #334155; }
+    .steps b { display: block; font-size: 28px; color: #16a34a; }
+    .url { font-size: 18px; color: #64748b; word-break: break-all; }
+    .print { margin-top: 24px; padding: 10px 22px; font: inherit; font-size: 16px; border: 0; border-radius: 20px; background: #2563eb; color: #fff; cursor: pointer; }
+    @media print { .print { display: none; } }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <h1>Find your way around TCHS</h1>
+    <h2>Scan to find any room, office or teacher</h2>
+    <img src="qr-code.png" alt="QR code for the TCHS Campus Map">
+    <div class="steps">
+      <div><b>1</b>Scan with your phone camera</div>
+      <div><b>2</b>Type a room or teacher</div>
+      <div><b>3</b>See where it is</div>
+    </div>
+    <p class="url">k-r-king.github.io/TCHS-Interactive-Map</p>
+    <button class="print" onclick="print()">Print this poster</button>
+  </div>
+</body>
+</html>

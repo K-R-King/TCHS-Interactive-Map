@@ -1,58 +1,65 @@
 # TCHS Interactive Map
 
-An interactive campus map of Temple City High School. Click any room or area on the map to see photos of it — handy for new students, visitors and Back to School Night.
+An interactive campus map of Temple City High School. Find any room, office or teacher and see photos of it — on a phone, in a browser, or on a computer in the front office.
 
-![The interactive map](docs/map.png)
+![The web version](docs/web.png)
+
+## Three ways to use it
+
+| | Best for | How |
+| --- | --- | --- |
+| **Website** | Parents and students on their phones | Open **https://k-r-king.github.io/TCHS-Interactive-Map/** or scan the QR code on the [printable poster](web/poster.html) |
+| **Windows app** | School computers | Download **TCHS Map.exe** from [Releases](../../releases) and double-click it — no Python needed |
+| **Python** | Working on the project | `pip install -r requirements.txt`, then `python main.py` |
 
 ## Features
 
-- **The 2025 campus map** (as of 8/22/25), with every room and area clickable.
-- **Search** — just start typing a room number or name (like `214` or `nurse`). Matching places light up; press Enter to open the first one.
-- **Photo galleries** — places like the gym, Senior Circle and 601 have several photos. Browse them with the arrow buttons or the ← → keys.
-- **Color-coded buildings** with hover highlights and a tooltip showing each place's full name.
-- **Resizable and fullscreen** — maximize the window or press F11.
+- **Search by room, place or teacher** — type `214`, `nurse` or a teacher's name. Matches light up on the map.
+- **Quick find** — one tap highlights every restroom, office, athletics area or campus entrance.
+- **Photo galleries** — swipe, click the arrows or use ← → to browse a place's photos.
+- **Zoom and pan** — pinch, scroll or use the + / − buttons; drag to move around.
+- **More places** — photos of spots that aren't outlined on the map, like the basketball courts and Team Room.
+- **Shareable links** — every place has its own link (for example `…/#214`), handy for emails or room-specific QR codes.
+- **Kiosk mode** for a screen at an event — fullscreen, a big "tap a room" prompt, and it resets itself after a minute without use. Website: add `?kiosk` to the address. Windows/Python: run with `--kiosk`.
 
-![A room's photos](docs/room.jpg)
+<p align="center"><img src="docs/phone.png" alt="The website on phones" width="760"></p>
 
-## Running it
+## Keeping it up to date
 
-You need [Python 3](https://www.python.org/downloads/) (3.9 or newer).
+Everything that changes from year to year lives in two folders, so most updates don't need any code.
 
-```bash
-pip install -r requirements.txt
-python main.py
-```
+### Teachers and subjects — `data/rooms.csv`
 
-## Controls
+Open `data/rooms.csv` in Excel or Google Sheets and fill in the **teacher** and **subject** columns (and **notes** if useful). Leave the **id** column as it is. Searching for a teacher's name will then find their room, and the room's photo caption shows who teaches there.
 
-| Action | How |
-| --- | --- |
-| Open a place's photos | Click anywhere inside its box on the map |
-| Find a room | Start typing on the map; **Enter** opens the first match, **Esc** clears |
-| Next / previous photo | Arrow buttons, or **←** **→** |
-| Go back to the map | **← Back to Map**, **Esc** or **Backspace** |
-| Fullscreen on / off | **F11** (or maximize the window) |
+### Photos — `assets/photos/<place>/`
 
-## Adding or replacing photos
+Each place has its own folder, like `assets/photos/214/`. To add or replace photos:
 
-Every place on the map is one line in the `PLACES` list near the top of `main.py`:
+1. Put the photos in that place's folder (JPEG or PNG, any size — they're shown fitted to the screen). Photos are shown in file-name order.
+2. Run `python tools/build.py`. It updates the website's photo list and **[PHOTO-CHECKLIST.md](PHOTO-CHECKLIST.md)** — a printable list of every place still waiting for a photo.
 
-```python
-P('214', RED, (952, 646, 54, 34), ['214.jpg']),
-```
+Places without photos show a stand-in photo marked "real photo coming soon".
 
-That's the label, its color, its box on the map (x, y, width, height) and its photos. To add photos:
+### Rooms on the map — `data/places.json`
 
-1. Put the photos in `assets/` (JPEG or PNG — any size or shape works).
-2. Add their file names to the place's list, e.g. `['214.jpg', '214 inside.jpg']`.
+Each place's label, color, type and box on the map (x, y, width, height on the 1240 × 930 map) are listed here. Places in `"extras"` have photos but no box, and appear under **More places**.
 
-Places without a list (like `P('212', RED, (784, 728, 59, 34))`) show a stand-in photo marked "real photo coming soon" until they get their own.
+## Publishing
+
+- **Website:** every push to `main` republishes it automatically (`.github/workflows/website.yml`). GitHub Pages must be turned on under **Settings → Pages → Source: GitHub Actions**, and the repository must be public on a free GitHub account.
+- **Windows app:** push a version tag, e.g. `git tag v1.1.0 && git push origin v1.1.0`. GitHub builds `TCHS Map.exe` and attaches it to a new release (`.github/workflows/windows-app.yml`).
 
 ## Project layout
 
 ```
-main.py              The app
-assets/              Campus map and location photos (sized for the app)
-TCHS Map 2025.pdf    The original campus map
-docs/                Screenshots for this README
+index.html, web/        The website
+main.py                 The Python / Windows app
+data/places.json        Every place on the map
+data/rooms.csv          Teachers and subjects (edit in a spreadsheet)
+data/photos.json        Photo list for the website (made by tools/build.py)
+assets/photos/<place>/  Photos, one folder per place
+assets/map_2025_hd.png  The campus map
+tools/build.py          Refreshes the photo list and the photo checklist
+TCHS Map 2025.pdf       The original campus map
 ```

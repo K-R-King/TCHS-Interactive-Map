@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TCHS Campus Map</title>
+  <meta name="description" content="Interactive map of Temple City High School. Find any room, office or teacher and see photos of it.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="web/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="./" aria-label="TCHS Campus Map home">
+      <img src="web/icon.svg" alt="" width="28" height="28">
+      <span>TCHS <b>Campus Map</b></span>
+    </a>
+    <div class="search" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+      <input id="search" type="search" placeholder="Room, place or teacher" autocomplete="off" spellcheck="false"
+             aria-label="Search rooms, places or teachers" aria-controls="results" enterkeyhint="go">
+      <span id="count" aria-live="polite"></span>
+      <ul id="results" role="listbox" hidden></ul>
+    </div>
+    <nav class="chips" aria-label="Quick find">
+      <button type="button" data-kind="restroom">Restrooms</button>
+      <button type="button" data-kind="office">Offices</button>
+      <button type="button" data-kind="athletics">Athletics</button>
+      <button type="button" data-kind="entrance">Entrances</button>
+      <button type="button" id="more-button">More places</button>
+    </nav>
+  </header>
+
+  <main id="viewport" aria-label="Campus map. Drag to move, pinch or scroll to zoom.">
+    <div id="stage">
+      <img id="map" alt="Temple City High School campus map" width="1240" height="930" draggable="false">
+    </div>
+    <div class="zoom" aria-label="Zoom">
+      <button type="button" id="zoom-in" aria-label="Zoom in">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+      <button type="button" id="zoom-out" aria-label="Zoom out">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+      <button type="button" id="zoom-fit" aria-label="Show the whole map">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+    </div>
+    <div id="tooltip" role="tooltip" hidden></div>
+    <p id="kiosk-banner" hidden>Tap a room &ndash; or type a room number or teacher</p>
+    <p id="loading">Loading map&hellip;</p>
+  </main>
+
+  <section id="viewer" hidden aria-modal="true" role="dialog" aria-labelledby="viewer-title">
+    <img id="photo" alt="">
+    <button type="button" class="pill back" id="viewer-back">&larr;&ensp;Back to map</button>
+    <button type="button" class="pill share" id="viewer-share">Share</button>
+    <button type="button" class="arrow prev" id="viewer-prev" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+    <button type="button" class="arrow next" id="viewer-next" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+    <div class="caption">
+      <h2><span id="viewer-title"></span> <small id="viewer-count"></small></h2>
+      <p id="viewer-details" hidden></p>
+      <p id="viewer-note" hidden>Stand-in photo &ndash; real photo coming soon</p>
+    </div>
+  </section>
+
+  <section id="more" hidden aria-modal="true" role="dialog" aria-labelledby="more-title">
+    <div class="panel">
+      <button type="button" class="close" id="more-close" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <h2 id="more-title">More places</h2>
+      <p>Photos of places that aren&rsquo;t outlined on the map</p>
+      <ul id="more-list"></ul>
+    </div>
+  </section>
+
+  <div id="toast" role="status" hidden></div>
+  <script src="web/app.js"></script>
+</body>
+</html>

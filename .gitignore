@@ -1,5 +1,14 @@
-# Original full-size photos and videos; the app uses the resized copies in assets/
+# Original full-size photos and videos; the app uses the resized copies in assets/photos/
 Graphics/
+
+# Build output
+build/
+dist/
+*.spec
+_site/
+
+# Local test screenshots
+_shots/
 
 __pycache__/
 *.pyc

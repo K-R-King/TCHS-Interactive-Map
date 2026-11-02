@@ -1,0 +1,42 @@
+# Builds "TCHS Map.exe". Pushing a tag like v1.0.0 also attaches it to a GitHub Release.
+name: Windows app
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt pyinstaller
+      - name: Refresh the photo list
+        run: python tools/build.py
+      - name: Build the app
+        run: pyinstaller --noconfirm --onefile --windowed --name "TCHS Map" --icon tools/icon.ico --add-data "assets;assets" --add-data "data;data" main.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TCHS-Map-Windows
+          path: dist/TCHS Map.exe
+      - name: Attach to the release
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ github.ref_name }}" "dist/TCHS Map.exe" \
+            --title "TCHS Map ${{ github.ref_name }}" \
+            --notes "Download **TCHS Map.exe** and double-click it — no Python needed.
+
+          - For a front-office screen, make a shortcut to it and add \` --kiosk\` to the end of the shortcut's Target.
+          - To show teacher names, put an edited \`rooms.csv\` (from the repo's \`data\` folder) next to the .exe.
+
+          Windows may warn that the app is from an unknown publisher; choose **More info → Run anyway**."

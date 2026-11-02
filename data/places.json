@@ -1,0 +1,1518 @@
+{
+ "map": "assets/map_2025_hd.png",
+ "size": [
+  1240,
+  930
+ ],
+ "stand_in": "assets/stand-in.jpg",
+ "zones": {
+  "red": "#dc2626",
+  "purple": "#9333ea",
+  "green": "#16a34a",
+  "yellow": "#ca8a04",
+  "blue": "#2563eb",
+  "orange": "#ea580c",
+  "brown": "#92400e",
+  "teal": "#0d9488"
+ },
+ "places": [
+  {
+   "id": "601",
+   "label": "601",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    755,
+    338,
+    117,
+    154
+   ]
+  },
+  {
+   "id": "cafeteria-staff-lounge",
+   "label": "Cafeteria & Staff Lounge",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    755,
+    235,
+    117,
+    101
+   ]
+  },
+  {
+   "id": "216",
+   "label": "216",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    837,
+    646,
+    58,
+    34
+   ]
+  },
+  {
+   "id": "215",
+   "label": "215",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    897,
+    646,
+    53,
+    34
+   ]
+  },
+  {
+   "id": "214",
+   "label": "214",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    952,
+    646,
+    54,
+    34
+   ]
+  },
+  {
+   "id": "restroom-216-row",
+   "label": "RR",
+   "zone": "red",
+   "kind": "restroom",
+   "box": [
+    1007,
+    646,
+    54,
+    34
+   ],
+   "title": "Restroom (200s)"
+  },
+  {
+   "id": "116",
+   "label": "116",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    837,
+    681,
+    58,
+    34
+   ]
+  },
+  {
+   "id": "115",
+   "label": "115",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    897,
+    681,
+    53,
+    34
+   ]
+  },
+  {
+   "id": "114",
+   "label": "114",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    952,
+    681,
+    54,
+    34
+   ]
+  },
+  {
+   "id": "restroom-116-row",
+   "label": "RR",
+   "zone": "red",
+   "kind": "restroom",
+   "box": [
+    1007,
+    681,
+    54,
+    34
+   ],
+   "title": "Restroom (100s)"
+  },
+  {
+   "id": "213",
+   "label": "213",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    1121,
+    647,
+    58,
+    34
+   ]
+  },
+  {
+   "id": "113",
+   "label": "113",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    1121,
+    683,
+    58,
+    33
+   ]
+  },
+  {
+   "id": "108",
+   "label": "108",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    1121,
+    764,
+    58,
+    34
+   ]
+  },
+  {
+   "id": "208",
+   "label": "208",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    1121,
+    729,
+    58,
+    33
+   ]
+  },
+  {
+   "id": "212",
+   "label": "212",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    784,
+    728,
+    59,
+    34
+   ]
+  },
+  {
+   "id": "211",
+   "label": "211",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    844,
+    728,
+    54,
+    34
+   ]
+  },
+  {
+   "id": "210",
+   "label": "210",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    899,
+    728,
+    55,
+    34
+   ]
+  },
+  {
+   "id": "209",
+   "label": "209",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    955,
+    728,
+    57,
+    34
+   ]
+  },
+  {
+   "id": "restroom-212-row",
+   "label": "RR",
+   "zone": "red",
+   "kind": "restroom",
+   "box": [
+    1013,
+    728,
+    49,
+    34
+   ],
+   "title": "Restroom (200s)"
+  },
+  {
+   "id": "112",
+   "label": "112",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    784,
+    764,
+    59,
+    34
+   ]
+  },
+  {
+   "id": "111",
+   "label": "111",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    844,
+    764,
+    54,
+    34
+   ]
+  },
+  {
+   "id": "110",
+   "label": "110",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    899,
+    764,
+    55,
+    34
+   ]
+  },
+  {
+   "id": "109",
+   "label": "109",
+   "zone": "red",
+   "kind": "room",
+   "box": [
+    955,
+    764,
+    57,
+    34
+   ]
+  },
+  {
+   "id": "restroom-112-row",
+   "label": "RR",
+   "zone": "red",
+   "kind": "restroom",
+   "box": [
+    1013,
+    764,
+    49,
+    34
+   ],
+   "title": "Restroom (100s)"
+  },
+  {
+   "id": "restroom-400s",
+   "label": "RR",
+   "zone": "purple",
+   "kind": "restroom",
+   "box": [
+    1010,
+    389,
+    39,
+    16
+   ],
+   "title": "Restroom (400s)"
+  },
+  {
+   "id": "401",
+   "label": "401",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1010,
+    406,
+    39,
+    47
+   ]
+  },
+  {
+   "id": "402",
+   "label": "402",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1010,
+    313,
+    39,
+    55
+   ]
+  },
+  {
+   "id": "403",
+   "label": "403",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1010,
+    258,
+    39,
+    53
+   ]
+  },
+  {
+   "id": "404",
+   "label": "404",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1010,
+    201,
+    39,
+    56
+   ]
+  },
+  {
+   "id": "405",
+   "label": "405",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1050,
+    201,
+    38,
+    56
+   ]
+  },
+  {
+   "id": "406",
+   "label": "406",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1050,
+    258,
+    38,
+    53
+   ]
+  },
+  {
+   "id": "407",
+   "label": "407",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1050,
+    313,
+    38,
+    55
+   ]
+  },
+  {
+   "id": "408",
+   "label": "408",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1050,
+    406,
+    38,
+    47
+   ]
+  },
+  {
+   "id": "409",
+   "label": "409",
+   "zone": "purple",
+   "kind": "room",
+   "box": [
+    1050,
+    463,
+    38,
+    47
+   ]
+  },
+  {
+   "id": "beckner-gym",
+   "label": "Beckner Gym",
+   "zone": "green",
+   "kind": "athletics",
+   "box": [
+    451,
+    385,
+    115,
+    94
+   ]
+  },
+  {
+   "id": "tennis-courts",
+   "label": "Tennis Courts",
+   "zone": "green",
+   "kind": "athletics",
+   "box": [
+    438,
+    271,
+    39,
+    85
+   ]
+  },
+  {
+   "id": "702",
+   "label": "702",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    490,
+    271,
+    65,
+    85
+   ]
+  },
+  {
+   "id": "senior-circle",
+   "label": "Senior Circle",
+   "zone": "green",
+   "kind": "outdoor",
+   "box": [
+    632,
+    415,
+    59,
+    57
+   ],
+   "shape": "circle"
+  },
+  {
+   "id": "703",
+   "label": "703",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    556,
+    271,
+    49,
+    85
+   ]
+  },
+  {
+   "id": "705",
+   "label": "705",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    634,
+    271,
+    26,
+    85
+   ]
+  },
+  {
+   "id": "704",
+   "label": "704",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    606,
+    271,
+    27,
+    85
+   ]
+  },
+  {
+   "id": "706",
+   "label": "706",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    661,
+    327,
+    22,
+    29
+   ]
+  },
+  {
+   "id": "707",
+   "label": "707",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    661,
+    299,
+    22,
+    28
+   ]
+  },
+  {
+   "id": "708",
+   "label": "708",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    661,
+    271,
+    22,
+    28
+   ]
+  },
+  {
+   "id": "709",
+   "label": "709",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    634,
+    246,
+    26,
+    23
+   ]
+  },
+  {
+   "id": "801",
+   "label": "801",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    569,
+    427,
+    22,
+    24
+   ]
+  },
+  {
+   "id": "802",
+   "label": "802",
+   "zone": "green",
+   "kind": "room",
+   "box": [
+    569,
+    402,
+    22,
+    24
+   ]
+  },
+  {
+   "id": "restroom-700s",
+   "label": "RR",
+   "zone": "green",
+   "kind": "restroom",
+   "box": [
+    661,
+    233,
+    22,
+    36
+   ],
+   "title": "Restroom (700s)"
+  },
+  {
+   "id": "weight-room",
+   "label": "Weight Room & Dance Studio 701",
+   "zone": "green",
+   "kind": "athletics",
+   "box": [
+    489,
+    169,
+    62,
+    100
+   ],
+   "title": "Weight Room & Dance Studio (701)"
+  },
+  {
+   "id": "501",
+   "label": "501",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    423,
+    37,
+    30
+   ]
+  },
+  {
+   "id": "502",
+   "label": "502",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    388,
+    38,
+    33
+   ]
+  },
+  {
+   "id": "503",
+   "label": "503",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    342,
+    38,
+    26
+   ]
+  },
+  {
+   "id": "504",
+   "label": "504",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    313,
+    38,
+    27
+   ]
+  },
+  {
+   "id": "505",
+   "label": "505",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    276,
+    38,
+    35
+   ]
+  },
+  {
+   "id": "506",
+   "label": "506",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    240,
+    38,
+    35
+   ]
+  },
+  {
+   "id": "507",
+   "label": "507",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    201,
+    37,
+    38
+   ]
+  },
+  {
+   "id": "508",
+   "label": "508",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1128,
+    201,
+    40,
+    38
+   ]
+  },
+  {
+   "id": "509",
+   "label": "509",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    240,
+    39,
+    35
+   ]
+  },
+  {
+   "id": "510",
+   "label": "510",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    276,
+    39,
+    35
+   ]
+  },
+  {
+   "id": "511",
+   "label": "511",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    313,
+    39,
+    27
+   ]
+  },
+  {
+   "id": "512",
+   "label": "512",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    342,
+    39,
+    26
+   ]
+  },
+  {
+   "id": "514",
+   "label": "514",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    388,
+    39,
+    33
+   ]
+  },
+  {
+   "id": "515",
+   "label": "515",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    423,
+    39,
+    30
+   ]
+  },
+  {
+   "id": "516",
+   "label": "516",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1129,
+    463,
+    39,
+    47
+   ]
+  },
+  {
+   "id": "517",
+   "label": "517",
+   "zone": "yellow",
+   "kind": "room",
+   "box": [
+    1090,
+    463,
+    37,
+    47
+   ]
+  },
+  {
+   "id": "restroom-500s",
+   "label": "RR",
+   "zone": "yellow",
+   "kind": "restroom",
+   "box": [
+    1090,
+    369,
+    38,
+    12
+   ],
+   "title": "Restroom (500s)"
+  },
+  {
+   "id": "905",
+   "label": "905",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    408,
+    552,
+    75,
+    85
+   ]
+  },
+  {
+   "id": "904",
+   "label": "904",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    483,
+    552,
+    76,
+    85
+   ]
+  },
+  {
+   "id": "tennis-courts-south",
+   "label": "Tennis Courts",
+   "zone": "blue",
+   "kind": "athletics",
+   "box": [
+    158,
+    655,
+    127,
+    231
+   ]
+  },
+  {
+   "id": "lemon-parking-lot",
+   "label": "Lemon Parking Lot",
+   "zone": "blue",
+   "kind": "outdoor",
+   "box": [
+    287,
+    655,
+    126,
+    231
+   ]
+  },
+  {
+   "id": "lawn",
+   "label": "Lawn",
+   "zone": "blue",
+   "kind": "outdoor",
+   "box": [
+    427,
+    655,
+    151,
+    210
+   ]
+  },
+  {
+   "id": "media-center",
+   "label": "Media Center",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    594,
+    810,
+    123,
+    74
+   ]
+  },
+  {
+   "id": "senate-room",
+   "label": "Senate Room",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    676,
+    658,
+    41,
+    34
+   ]
+  },
+  {
+   "id": "mc1",
+   "label": "MC1",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    594,
+    700,
+    30,
+    14
+   ]
+  },
+  {
+   "id": "conference-rm-2",
+   "label": "Conference Rm 2",
+   "zone": "blue",
+   "kind": "office",
+   "box": [
+    619,
+    713,
+    58,
+    27
+   ],
+   "title": "Conference Room 2"
+  },
+  {
+   "id": "mc2",
+   "label": "MC2",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    594,
+    686,
+    30,
+    14
+   ]
+  },
+  {
+   "id": "mc3",
+   "label": "MC3",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    594,
+    672,
+    30,
+    14
+   ]
+  },
+  {
+   "id": "mc4",
+   "label": "MC4",
+   "zone": "blue",
+   "kind": "room",
+   "box": [
+    594,
+    658,
+    30,
+    14
+   ]
+  },
+  {
+   "id": "principals-office",
+   "label": "Principal's Office",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    615,
+    536,
+    35,
+    28
+   ]
+  },
+  {
+   "id": "nurse",
+   "label": "Nurse",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    678,
+    537,
+    31,
+    18
+   ]
+  },
+  {
+   "id": "registrar",
+   "label": "Registrar",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    754,
+    574,
+    38,
+    40
+   ]
+  },
+  {
+   "id": "conf-room",
+   "label": "Conf Room",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    615,
+    565,
+    36,
+    49
+   ],
+   "title": "Conference Room"
+  },
+  {
+   "id": "311",
+   "label": "311",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    754,
+    536,
+    81,
+    37
+   ]
+  },
+  {
+   "id": "main-office",
+   "label": "Main Office & Attendance",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    594,
+    760,
+    68,
+    48
+   ],
+   "title": "Main Office & Attendance Office"
+  },
+  {
+   "id": "310",
+   "label": "310",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    836,
+    536,
+    143,
+    38
+   ]
+  },
+  {
+   "id": "counseling",
+   "label": "Counseling College & Career",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    833,
+    574,
+    119,
+    40
+   ],
+   "title": "Counseling / College & Career"
+  },
+  {
+   "id": "304",
+   "label": "304",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    953,
+    575,
+    26,
+    39
+   ],
+   "note": "Mental Fitness Ctr"
+  },
+  {
+   "id": "restroom-300s",
+   "label": "RR",
+   "zone": "orange",
+   "kind": "restroom",
+   "box": [
+    980,
+    536,
+    32,
+    38
+   ],
+   "title": "Restroom (300s)"
+  },
+  {
+   "id": "309",
+   "label": "309",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    1034,
+    536,
+    57,
+    38
+   ]
+  },
+  {
+   "id": "308",
+   "label": "308",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    1092,
+    536,
+    77,
+    39
+   ]
+  },
+  {
+   "id": "305",
+   "label": "305",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    1034,
+    576,
+    41,
+    38
+   ],
+   "note": "DIS Counselor"
+  },
+  {
+   "id": "306",
+   "label": "306",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    1076,
+    576,
+    42,
+    38
+   ]
+  },
+  {
+   "id": "307",
+   "label": "307",
+   "zone": "orange",
+   "kind": "room",
+   "box": [
+    1120,
+    576,
+    49,
+    38
+   ],
+   "note": "School Psych"
+  },
+  {
+   "id": "ad-office",
+   "label": "AD Office",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    710,
+    537,
+    18,
+    17
+   ]
+  },
+  {
+   "id": "administrative-offices",
+   "label": "Administrative Offices",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    669,
+    590,
+    60,
+    24
+   ]
+  },
+  {
+   "id": "school-psych",
+   "label": "School Psych",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    793,
+    598,
+    18,
+    16
+   ]
+  },
+  {
+   "id": "storage",
+   "label": "Storage",
+   "zone": "orange",
+   "kind": "office",
+   "box": [
+    980,
+    575,
+    32,
+    38
+   ]
+  },
+  {
+   "id": "lunch-shelter",
+   "label": "Lunch Shelter",
+   "zone": "orange",
+   "kind": "outdoor",
+   "box": [
+    899,
+    302,
+    74,
+    50
+   ]
+  },
+  {
+   "id": "pool",
+   "label": "Pool",
+   "zone": "brown",
+   "kind": "athletics",
+   "box": [
+    292,
+    425,
+    62,
+    68
+   ]
+  },
+  {
+   "id": "804",
+   "label": "804",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    404,
+    412,
+    19,
+    55
+   ]
+  },
+  {
+   "id": "803",
+   "label": "803",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    404,
+    467,
+    19,
+    55
+   ]
+  },
+  {
+   "id": "locker-rooms",
+   "label": "Locker Rooms",
+   "zone": "brown",
+   "kind": "athletics",
+   "box": [
+    383,
+    412,
+    20,
+    110
+   ]
+  },
+  {
+   "id": "207",
+   "label": "207",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    784,
+    810,
+    59,
+    34
+   ]
+  },
+  {
+   "id": "206",
+   "label": "206",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    844,
+    810,
+    54,
+    34
+   ]
+  },
+  {
+   "id": "205",
+   "label": "205",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    899,
+    810,
+    55,
+    34
+   ]
+  },
+  {
+   "id": "204",
+   "label": "204",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    955,
+    810,
+    53,
+    34
+   ]
+  },
+  {
+   "id": "203",
+   "label": "203",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    1010,
+    810,
+    52,
+    34
+   ]
+  },
+  {
+   "id": "202",
+   "label": "202",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    1063,
+    810,
+    55,
+    34
+   ]
+  },
+  {
+   "id": "201",
+   "label": "201",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    1120,
+    810,
+    60,
+    34
+   ]
+  },
+  {
+   "id": "107",
+   "label": "107",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    784,
+    846,
+    59,
+    34
+   ]
+  },
+  {
+   "id": "106",
+   "label": "106",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    844,
+    846,
+    54,
+    34
+   ]
+  },
+  {
+   "id": "105",
+   "label": "105",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    899,
+    846,
+    55,
+    34
+   ]
+  },
+  {
+   "id": "104",
+   "label": "104",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    955,
+    846,
+    53,
+    34
+   ]
+  },
+  {
+   "id": "103",
+   "label": "103",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    1010,
+    846,
+    52,
+    34
+   ]
+  },
+  {
+   "id": "102",
+   "label": "102",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    1063,
+    846,
+    55,
+    34
+   ]
+  },
+  {
+   "id": "101",
+   "label": "101",
+   "zone": "brown",
+   "kind": "room",
+   "box": [
+    1120,
+    846,
+    60,
+    34
+   ]
+  },
+  {
+   "id": "entrance-north",
+   "label": "Entrance to Campus",
+   "zone": "teal",
+   "kind": "entrance",
+   "box": [
+    662,
+    176,
+    150,
+    21
+   ],
+   "title": "Entrance to Campus",
+   "shape": "tag"
+  },
+  {
+   "id": "entrance-west",
+   "label": "Entrance to Campus",
+   "zone": "teal",
+   "kind": "entrance",
+   "box": [
+    561,
+    616,
+    88,
+    40
+   ],
+   "title": "Entrance to Campus",
+   "shape": "tag"
+  },
+  {
+   "id": "entrance-south",
+   "label": "Entrance to Campus",
+   "zone": "teal",
+   "kind": "entrance",
+   "box": [
+    678,
+    895,
+    150,
+    21
+   ],
+   "title": "Entrance to Campus",
+   "shape": "tag"
+  }
+ ],
+ "extras": [
+  {
+   "id": "basketball-courts",
+   "title": "Basketball Courts",
+   "kind": "athletics"
+  },
+  {
+   "id": "team-room",
+   "title": "Team Room",
+   "kind": "athletics"
+  },
+  {
+   "id": "sports-med-room",
+   "title": "Sports Med Room",
+   "kind": "athletics"
+  },
+  {
+   "id": "asb-office",
+   "title": "ASB Office",
+   "kind": "office"
+  },
+  {
+   "id": "activities-office",
+   "title": "Activities Office",
+   "kind": "office"
+  },
+  {
+   "id": "alternative-school",
+   "title": "Alternative School",
+   "kind": "room"
+  },
+  {
+   "id": "700s-building",
+   "title": "700s Building",
+   "kind": "room"
+  },
+  {
+   "id": "elevator-200s",
+   "title": "200s Elevator",
+   "kind": "other"
+  },
+  {
+   "id": "heliotech-shed",
+   "title": "Heliotech Shed",
+   "kind": "other"
+  }
+ ]
+}
