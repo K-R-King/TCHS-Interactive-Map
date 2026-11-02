@@ -8,7 +8,7 @@ An interactive campus map of Temple City High School. Find any room, office or t
 
 | | Best for | How |
 | --- | --- | --- |
-| **Website** | Parents and students on their phones | Not published yet (the repository is private — see [Publishing](#publishing)). To try it on your computer: run `python -m http.server` in this folder and open http://localhost:8000 |
+| **Website** | Parents and students on their phones | Open **https://tchs-interactive-map.vercel.app** or scan the QR code on the [printable poster](web/poster.html) |
 | **Windows app** | School computers | Download **TCHS.Map.exe** from [Releases](../../releases) and double-click it — no Python needed |
 | **Python** | Working on the project | `pip install -r requirements.txt`, then `python main.py` |
 
@@ -47,7 +47,8 @@ Each place's label, color, type and box on the map (x, y, width, height on the 1
 
 ## Publishing
 
-- **Website:** once the repository is public (GitHub Pages needs that on a free account), turn on **Settings → Pages → Source: GitHub Actions**. Every push to `main` then republishes it automatically (`.github/workflows/website.yml`) at https://k-r-king.github.io/TCHS-Interactive-Map/ — the address the QR code on the [printable poster](web/poster.html) points to.
+- **Website:** hosted on Vercel at https://tchs-interactive-map.vercel.app (project `tchs-interactive-map`). Once the GitHub repo is connected in Vercel, every push to `main` updates the site automatically; until then, run `vercel deploy --prod` in this folder. `vercel.json` publishes only the website files (`index.html`, `web/`, `data/`, `assets/`). The repository itself stays private, but the website is public.
+- **Try the website locally:** run `python -m http.server` in this folder and open http://localhost:8000.
 - **Windows app:** push a version tag, e.g. `git tag v1.1.0 && git push origin v1.1.0`. GitHub builds `TCHS Map.exe` and attaches it to a new release (`.github/workflows/windows-app.yml`).
 
 ## Project layout
