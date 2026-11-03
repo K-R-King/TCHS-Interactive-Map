@@ -47,7 +47,7 @@ Each place's label, color, type and box on the map (x, y, width, height on the 1
 
 ## Publishing
 
-- **Website:** hosted on Vercel at https://tchs-interactive-map.vercel.app (project `tchs-interactive-map`). Once the GitHub repo is connected in Vercel, every push to `main` updates the site automatically; until then, run `vercel deploy --prod` in this folder. `vercel.json` publishes only the website files (`index.html`, `web/`, `data/`, `assets/`).
+- **Website:** hosted on Vercel at https://tchs-interactive-map.vercel.app (project `tchs-interactive-map`). The GitHub repo is connected, so every push to `main` updates the site automatically within a minute or so. `vercel.json` publishes only the website files (`index.html`, `web/`, `data/`, `assets/`).
 - **Try the website locally:** run `python -m http.server` in this folder and open http://localhost:8000.
 - **Windows app:** push a version tag, e.g. `git tag v1.1.0 && git push origin v1.1.0`. GitHub builds `TCHS Map.exe` and attaches it to a new release (`.github/workflows/windows-app.yml`).
 
